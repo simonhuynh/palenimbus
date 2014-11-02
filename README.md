@@ -1,4 +1,4 @@
-palenimbus
+Palenimb.us
 ==========
 
-An "online business card"
+A business card for a mobile world.
