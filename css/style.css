@@ -1,14 +1,9 @@
-/*****SLIDING si-menu PANEL STYLESHEET*****/
-/*****BY: AMIT JAKHU*****/
-/*****WWW.AMITJAKHU.COM*****/
 
-/*****FONTS*****/
+/* FONTS */
 
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic,700italic,700,300italic,300|Acme); /* Acme font is required for .arrow */
 
-/*****END FONTS*****/
-
-/*****DEMO ONLY*****/
+/* END FONTS */
 
 ::selection {
 	color: #fff;
@@ -27,6 +22,8 @@
 }
 
 body {
+	height: 100%;
+	width: 100%;
 	background: white;
 	font: normal 400 14px/21px 'Source Sans Pro', Helvetica, Arial, sans-serif;
 }
@@ -54,7 +51,7 @@ strong {
 	position: absolute;
 }
 
-#page1{
+#user-photo{
 	background-image:url(../simon/simon-bw.jpg);
 	background-size:cover;
 	background-repeat: no-repeat;
@@ -78,8 +75,9 @@ strong {
 	background: #d3d7dc;
 	border-right: 3px solid #fff;
 	width: 100px;
+	height:100%;
 	padding: 30px;
-	position: fixed;
+	position: absolute;
 	z-index: 100000;
 	opacity: 0.6;
     filter: alpha(opacity=60); /* For IE8 and earlier */
@@ -90,43 +88,15 @@ strong {
 }
 
 #si-menu {
-	left: 0; /* Change to right: 0; if you want the panel to display on the right side. */
+	left: -130px; /* Change to right: 0; if you want the panel to display on the right side. */
 }
 
-#si-menu:hover, #si-menu:focus {
+#si-menu:hover, #si-menu:focus, #si-menu:active, #si-menu.open {
 	left: 0 !important; /* Change to right: 0 !important; if you want the panel to display on the right side. */
 }
 
-#si-menu .arrow {
-	right: 2px; /* Change to left: 2px; if you want the panel to display on the right side. */
-}
-
-#si-menu.open{
-	left: 0 !important;
-}
-
-#si-menu.open:hover
-
-#si-menu .arrow {
-	font: normal 400 25px/25px 'Acme', Helvetica, Arial, sans-serif; /* Acme font is required for .arrow */
-	color: rgba(0,0,0,0.75); /* Arrow color */
-	width: 16px;
-	height: 25px;
-	display: block;
-	position: absolute;
-	top: 20px;
-	cursor: default;
-}
-
-#si-menu:hover .arrow {
-	transform: rotate(-180deg) translate(6px,-3px);
-	-moz-transform: rotate(-180deg) translate(6px,-3px);
-	-webkit-transform: rotate(-180deg) translate(6px,-3px);
-}
 
 #si-menu nav {
-	position: relative;
-	top: 75px;
 }
 
 .si-icon {
@@ -202,87 +172,6 @@ strong {
 
 #si-linkedin:active,
 #si-linkedin:hover,
-#si-loinkedin:focus{
+#si-linkedin:focus{
         background-position: -600px -110px;
 }
-
-.si-icon.mobile-big{
-	background-image:url(../imgs/si-menu-icons-big-poppy.png);
-	background-repeat:no-repeat;
-	display: block;
-	height: 110px;
-	width:110px;
-	margin-bottom:80px;
-}
-
-#si-phone.mobile-big {
-	background-position: -1050px -40px;
-}
-
-#si-phone.mobile-big:active,
-#si-phone.mobile-big:hover,
-#si-phone.mobile-big:focus{
-	background-position: -1050px -250px;
-} 
-
-#si-facebook.mobile-big {
-	background-position: -50px -40px;
-}
-
-#si-facebook.mobile-big:active,
-#si-facebook.mobile-big:hover,
-#si-facebook.mobile-big:focus{
-	background-position: -50px -250px;
-} 
-
-#si-mail.mobile-big {
-	background-position: -650px -40px;
-}
-
-#si-mail.mobile-big:active,
-#si-mail.mobile-big:hover,
-#si-mail.mobile-big:focus{
-	background-position: -650px -250px;
-} 
-
-#si-text.mobile-big {
-	background-position: -850px -40px;
-}
-
-#si-text.mobile-big:active,
-#si-text.mobile-big:hover,
-#si-text.mobile-big:focus{
-	background-position: -850px -250px;
-} 
-
-#si-twitter.mobile-big {
-	background-position: -450px -40px;
-}
-
-#si-twitter.mobile-big:active,
-#si-twitter.mobile-big:hover,
-#si-twitter.mobile-big:focus{
-	background-position: -450px -250px;
-} 
-
-#si-googlep.mobile-big {
-	background-position: -250px -40px;
-}
-
-#si-googlep.mobile-big:active,
-#si-googlep.mobile-big:hover,
-#si-googlep.mobile-big:focus{
-	background-position: -250px -250px;
-} 
-
-
-#si-linkedin.mobile-big {
-        background-position: -1250px -40px;
-}
-
-#si-linkedin.mobile-big:active,
-#si-linkedin.mobile-big:hover,
-#si-linkedin.mobile-big:focus{
-        background-position: -1250px -250px;
-}
-/*****END PANEL*****/
