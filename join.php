@@ -1,11 +1,8 @@
-<!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<!DOCTYPE html>
+<html>
+<head>	
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="js/pnJoin.js"></script>
+	<title>Welcome to Palenimb.us</title>
     <link rel="stylesheet" href="css/pnJoin.css">
   </head>
  <body>
@@ -47,5 +44,14 @@
 
   </div><!-- end #module -->
   </div><!-- end #bg -->
- </body>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+//Fall back to a local copy of jQuery if the CDN fails
+window.jQuery || document.write('<script src="js/lib/jquery-2.1.1.min.js"><\/script>');
+</script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/pnJoin.js"></script>
+
+</body>
 </html>

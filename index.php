@@ -1,21 +1,17 @@
 <?php
-
-
 function parseURL(){
 	$path = ltrim($_SERVER['REQUEST_URI'], '/');    // Trim leading slash(es)
 	$elements = explode('/', $path);                // Split path on slashes
 	if(count($elements) == 0)  header('/home.php');       // No path elements means home 
 	else switch(array_shift($elements)) {            // Pop off first item and switch
 		case 'Some-text-goes-here':
-        	     ShowPicture($elements); // passes rest of parameters to internal function
-        	     break;
-    		case 'more':
-      
+        	    ShowPicture($elements); // passes rest of parameters to internal function
+				break;
+    	case 'more':
 		default:
 			header('HTTP/1.1 404 Not Found');
-        		Show404Error();
-	}
-	
+        	Show404Error();
+	}	
 }
 function getCurrentUri() {
    $basepath = implode('/', array_slice(explode('/', $_SERVER['SCRIPT_NAME']), 0, -1)) . '/';
@@ -28,29 +24,24 @@ function getCurrentUri() {
    $base_url = getCurrentUri();
    $routes = array();
    $routes = explode('/', $base_url);
-   foreach($routes as $route)
-   {
-   if(trim($route) != '')
-   array_push($routes, $route);
+   foreach($routes as $route) {
+	   if(trim($route) != '')
+	   array_push($routes, $route);
    }
  
    /*
    Now, $routes will contain all the routes. $routes[0] will correspond to first route. For e.g. in above example $routes[0] is search, $routes[1] is book and $routes[2] is fitzgerald
    */
  
-   if($routes[0] == “search”)
-   {
-   if($routes[1] == “book”)
-   {
-   searchBooksBy($routes[2]);
-   }
+   if($routes[0] == “search”) {
+   	if($routes[1] == “book”) searchBooksBy($routes[2]);  
    }
 
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-Type" content="text/html; charset=utf-8" />
 <title>Simon Huynh</title>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <link href="css/mq.css" rel="stylesheet" type="text/css" />
