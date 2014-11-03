@@ -1,0 +1,120 @@
+/* Palenimb.us media queries */
+
+/* retina and high-resolution screens */
+@media only screen and (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
+	
+	.si-icon {
+		background-image:url(../imgs/si-menu-icons-big-poppy.png);
+		background-repeat:no-repeat;
+		display: block;
+		height: 110px;
+		width:110px;
+		margin-bottom:80px;
+	}
+	
+	#si-phone {
+		background-position: -1050px -40px;
+	}
+
+	#si-phone:active,
+	#si-phone:hover,
+	#si-phone:focus{
+		background-position: -1050px -250px;
+	} 
+
+	#si-facebook {
+		background-position: -50px -40px;
+	}
+
+	#si-facebook:active,
+	#si-facebook:hover,
+	#si-facebook:focus{
+		background-position: -50px -250px;
+	} 
+
+	#si-mail {
+		background-position: -650px -40px;
+	}
+
+	#si-mail:active,
+	#si-mail:hover,
+	#si-mail:focus{
+		background-position: -650px -250px;
+	} 
+
+	#si-text {
+		background-position: -850px -40px;
+	}
+
+	#si-text:active,
+	#si-text:hover,
+	#si-text:focus{
+		background-position: -850px -250px;
+	} 
+
+	#si-twitter {
+		background-position: -450px -40px;
+	}
+
+	#si-twitter:active,
+	#si-twitter:hover,
+	#si-twitter:focus{
+		background-position: -450px -250px;
+	} 
+
+	#si-googlep {
+		background-position: -250px -40px;
+	}
+
+	#si-googlep:active,
+	#si-googlep:hover,
+	#si-googlep:focus{
+		background-position: -250px -250px;
+	} 
+
+
+	#si-linkedin {
+	        background-position: -1250px -40px;
+	}
+
+	#si-linkedin:active,
+	#si-linkedin:hover,
+	#si-linkedin:focus{
+	        background-position: -1250px -250px;
+	}
+}
+
+@media screen and (min-width:900px) {
+    .desktop-hide {
+        display: none !important;
+    }
+}
+
+/* mobile tablet and phone */
+@media screen and (max-width:900px){
+	.mobile-hide {
+        display: none !important;
+    }	
+} 
+
+/* tablet only */
+@media screen and (min-width: 501px) and (max-width: 900px){
+	.tablet-hide {
+        display: none !important;
+    }		
+} 
+
+
+/* retina phone and smaller */
+@media  (-webkit-min-device-pixel-ratio: 2) and (max-width:650px), 
+ 	(min-resolution: 192dpi) {
+	.smartphone-hide and (max-width:650px) {
+        display: none !important;
+    }
+
+	.si-nav{
+		top:0px;
+	}
+
+}
+
