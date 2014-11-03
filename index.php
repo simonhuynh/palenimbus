@@ -52,15 +52,16 @@ function getCurrentUri() {
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Simon Huynh</title>
-<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/mq.css" rel="stylesheet" type="text/css" />
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js" type="text/javascript"></script>
 <script>
 //Fall back to a local copy of jQuery if the CDN fails
-window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>');
+window.jQuery || document.write('<script src="js/lib/jquery-2.1.1.min.js"><\/script>');
 </script>
-
-<!--SLIDING PANEL HEIGHT ADJUST TO DOCUMENT HEIGHT-->
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js" type="text/javascript"></script>
+<script src="js/lib/underscore-min.js" type="text/javascript"></script>
+<script src="js/lib/backbone.js" type="text/javascript"></script>
 <script type="text/javascript">
 
 /*!
@@ -92,59 +93,47 @@ function isMobile() {
 	}
 
     if ( (/iP(hone|od)/.test(navigator.platform)) && (/Safari/i.test(navigator.userAgent) ) ) {
-	// supports iOS 2.0 and later: <http://bit.ly/TJjs1V>
-	var v = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/);
-	out.mobileSafari = parseInt(v[1], 10);
-	//this will also include iPad
+		// supports iOS 2.0 and later: <http://bit.ly/TJjs1V>
+		//this will also include iPad		
+		var v = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/);
+		out.mobileSafari = parseInt(v[1], 10);
     }	
     
 	return out;
 }
 
 mobileSpecs=isMobile();
+var adjust = (mobileSpecs.mobile) ? '-125px' : '-130px';
+var $siMenu;
 $(document).ready(function() {	
-	$("#si-menu").height($(document).height()).css('position','absolute').click(function(){ 
-			//$(this).toggleClass('open');
-		}) ;
-	$("body").height($(document).height());
-	if (mobileSpecs.mobile || mobileSpecs.mobileSafari) {
-		$(".si-icon").addClass("mobile-big");
-		$(".si-nav").css('top', '0px');
-	}	
-});
-</script>
+	
+	$siMenu = $("#si-menu");
 
-<!--SLIDING PANEL DELAY AND HIDE-->
-<script type="text/javascript">
-$(document).ready(function() {
+	if (!mobileSpecs.mobileSafari) $('#si-menu').css('left', adjust);
+	
+//	if (mobileSpecs.mobile || mobileSpecs.mobileSafari) { }	
     setTimeout( function(){
-		var adjust = (mobileSpecs.mobile) ? '-125px' : '-130px';
-		if (!mobileSpecs.mobileSafari) $('#si-menu').css('left', adjust);
+		$siMenu.toggleClass('open');
+		
 	},4000);
 });
 </script>
-<style>
-</style>
 </head>
-
 <body>
-<div id="page1" class="page photo">
+<div id="user-photo" class="page photo">
+
 </div>
-<div id="url"><h1><?php echo $base_url; ?> </h1>  </div>
-<div id="url"><h1><?php echo $_SERVER["REQUEST_URI"]; ?> </h1>  </div>
-<div id="url"><h1><?php echo $_SERVER['SCRIPT_NAME']; ?> </h1>  </div>
-<!--SLIDING MENU PANEL-->
-<div id="si-menu">
-	<div class="arrow"><</div>
+<!--SLIDING ICON MENU PANEL-->
+<div id="si-menu" class="open">
     <nav class="si-nav">
         <a id="si-phone" class="si-icon" href="tel:4157346182"></a>
         <a id="si-mail" class="si-icon" href="mailto:simonhuynh@gmail.com"></a>
         <a id="si-text" class="si-icon" href="sms://4157346182"></a>
-	<a id="si-linkedin" class="si-icon" href="https://www.linkedin.com/profile/view?id=379270475"></a>
+		<a id="si-linkedin" class="si-icon" href="https://www.linkedin.com/profile/view?id=379270475"></a>
         <a id="si-facebook" class="si-icon" href="http://facebook.com/hellomynameissimon"></a>
         <a id="si-googlep" class="si-icon" href="http://plus.google.com/+SimonHuynh-SF"></a>
     </nav>
 </div>
-<!--END SLIDING MENU PANEL-->
+<!--END SLIDING ICON MENU PANEL-->
 </body>
 </html>

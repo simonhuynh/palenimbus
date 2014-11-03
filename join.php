@@ -5,17 +5,17 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="/js/pnJoin.js"></script>
-    <link rel="stylesheet" href="/css/pnJoin.css">
+    <script type="text/javascript" src="js/pnJoin.js"></script>
+    <link rel="stylesheet" href="css/pnJoin.css">
   </head>
  <body>
   <div id="bg">
   <div class="module">
     <ul>
-      <li class="tab activeTab" ><img src="/imgs/mail-lock.png" alt="" class="icon"/></li>
+      <li class="tab activeTab" ><img src="imgs/mail-lock.png" alt="" class="icon"/></li>
       <li class="tab"><img src="http://i.imgur.com/Fk1Urva.png" alt="" class="icon"/></li>
       <li class="tab" ><img src="http://i.imgur.com/LCCJ06E.png" alt="" class="icon"/></li>
-      <li class="tab" ><img src="/imgs/portrait.png" alt="" class="icon"/></li>
+      <li class="tab" ><img src="imgs/portrait.png" alt="" class="icon"/></li>
     </ul>
 
     <form class="form" id="emailLoginPasswdForm">
