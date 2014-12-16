@@ -1,9 +1,9 @@
 
-/* FONTS */
+/* fonts */
 
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic,700italic,700,300italic,300|Acme); /* Acme font is required for .arrow */
 
-/* END FONTS */
+/* end fonts */
 
 ::selection {
 	color: #fff;
@@ -44,8 +44,6 @@ strong {
 	font-weight: 700;
 }
 
-/*****END DEMO ONLY*****/
-
 .page {
 	height:100vh;
 	width:100vw;
@@ -60,17 +58,7 @@ strong {
 }
 
 
-/** ANIMATONS (optional) **/
-#si-menu, #si-menu .arrow {
-	transition: all 0.4s;
-	-moz-transition: all 0.4s;
-	-webkit-transition: all 0.4s;
-}
-
-/**END ANIMATONS **/
-
-
-/*****PANEL*****/
+/* sliding panel */
 
 #si-menu {
 	background: #d3d7dc;
@@ -95,7 +83,6 @@ strong {
 #si-menu:hover, #si-menu:focus, #si-menu:active, #si-menu.open {
 	left: 0 !important; /* Change to right: 0 !important; if you want the panel to display on the right side. */
 }
-
 
 #si-menu nav {
 }
@@ -176,3 +163,33 @@ strong {
 #si-linkedin:focus{
         background-position: -600px -110px;
 }
+
+#si-blog {
+        background-position: -800px -10px;
+}
+
+#si-blog:active,
+#si-blog:hover,
+#si-blog:focus{
+        background-position: -800px -110px;
+}
+
+#si-vcf {
+        background-position: -700px -10px;
+}
+
+#si-vcf:active,
+#si-vcf:hover,
+#si-vcf:focus{
+        background-position: -700px -110px;
+}
+
+/* animations */
+#si-menu, #si-menu .arrow {
+	transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+}
+
+/* end animations */
+

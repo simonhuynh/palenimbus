@@ -51,8 +51,10 @@ function getCurrentUri() {
 window.jQuery || document.write('<script src="js/lib/jquery-2.1.1.min.js"><\/script>');
 </script>
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js" type="text/javascript"></script>
+<!-- not yet using underscore or backbone
 <script src="js/lib/underscore-min.js" type="text/javascript"></script>
 <script src="js/lib/backbone.js" type="text/javascript"></script>
+-->
 <script type="text/javascript">
 
 /*!
@@ -120,9 +122,12 @@ $(document).ready(function() {
         <a id="si-phone" class="si-icon" href="tel:4157346182"></a>
         <a id="si-mail" class="si-icon" href="mailto:simonhuynh@gmail.com"></a>
         <a id="si-text" class="si-icon" href="sms://4157346182"></a>
-		<a id="si-linkedin" class="si-icon" href="https://www.linkedin.com/profile/view?id=379270475"></a>
+		<a id="si-linkedin" class="si-icon" href="http://www.linkedin.com/in/simonhuynh"></a>
         <a id="si-facebook" class="si-icon" href="http://facebook.com/hellomynameissimon"></a>
         <a id="si-googlep" class="si-icon" href="http://plus.google.com/+SimonHuynh-SF"></a>
+        <a id="si-twitter" class="si-icon" href="https://twitter.com/supergodbro"></a>
+        <a id="si-blog" class="si-icon" href="http://simonhuynh.com"></a>
+        <a id="si-vcf" class="si-icon" href="simon/contactinfo.vcf" download></a>
     </nav>
 </div>
 <!--END SLIDING ICON MENU PANEL-->

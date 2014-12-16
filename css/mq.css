@@ -72,7 +72,6 @@
 		background-position: -250px -250px;
 	} 
 
-
 	#si-linkedin {
 	        background-position: -1250px -40px;
 	}
@@ -81,6 +80,26 @@
 	#si-linkedin:hover,
 	#si-linkedin:focus{
 	        background-position: -1250px -250px;
+	}
+
+	#si-blog {
+	        background-position: -1650px -40px;
+	}
+
+	#si-blog:active,
+	#si-blog:hover,
+	#si-blog:focus{
+	        background-position: -1650px -250px;
+	}
+
+	#si-vcf {
+	        background-position: -1450px -40px;
+	}
+
+	#si-vcf:active,
+	#si-vcf:hover,
+	#si-vcf:focus{
+	        background-position: -1450px -250px;
 	}
 }
 
