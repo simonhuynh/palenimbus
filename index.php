@@ -127,7 +127,7 @@ $(document).ready(function() {
         <a id="si-googlep" class="si-icon" href="http://plus.google.com/+SimonHuynh-SF"></a>
         <a id="si-twitter" class="si-icon" href="https://twitter.com/supergodbro"></a>
         <a id="si-blog" class="si-icon" href="http://simonhuynh.com"></a>
-        <a id="si-vcf" class="si-icon" href="simon/contactinfo.vcf" download></a>
+        <a id="si-vcf" class="si-icon" href="simon/contactinfo.vcf" media="text/vcard" download></a>
     </nav>
 </div>
 <!--END SLIDING ICON MENU PANEL-->
